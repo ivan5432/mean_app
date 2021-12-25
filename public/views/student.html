@@ -1,0 +1,67 @@
+<body>
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <!-- JS -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <div class="bg-success p-2 text-dark bg-opacity-10" ng-app="" ng-controller="StudentController">
+        <h2 class="text-center">Students</h2>
+        <p class="text-center">{{message}}</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <formname name="answerForm">
+                    <td>
+                        <input class="form-control"   ng-model="student.name" id="nameS" maxlength="160" minlength="3" required>
+                        <input class="form-control" ng-model="student.place" id="placeS" maxlength="160" minlength="3" required>
+                        <input class="form-control"   ng-model="student.lastname" id="lastnameS"  maxlength="160" minlength="3"> 
+                        <input class="form-control"  ng-model="student.birthday " id="b-dayS"  placeholder="/\d\d/\d\d/\d\d\d\d/" type="date" >
+                        <input class="form-control"  ng-model="student.group " id="groupS"  maxlength="160" minlength="2">
+                    </td>
+                    <td>
+                        <button class="btn-primary" ng-click="addStudent(answerForm)">Add Student</button>
+                    </td>
+                </form>
+                </tr>
+                <tr ng-repeat="student in students" >
+                    <td >{{ student.name }}</td>
+                    <td  >{{ student.place }}</td>
+                    <td>{{ student.lastname }}</td>
+                    <td >{{ student.birthday }}</td>
+                    <td >{{ student.group }}</td>
+                    <td>
+                        <button class="btn-info" ng-click="delete(student._id)">Delete</button>
+                    </td>
+                    <td>
+                        <button class="btn-info" ng-click="edit(student)" id="bt">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+
+                    <!-- <ng-container > -->
+
+                    <td><input class="form-control" class="name" id ="name" value="student" type="text" /></td>
+                    <td><input class="form-control" class="place" id ="place" value="student" type="text" /></td>
+                    <td><input class="form-control" class="lastname" id ="lastname" value="student" type="text" /></td>
+                    <td><input class="form-control"  class="birthday" id ="birthday" value="student" type="text" /></td>
+                    <td><input class="form-control" class="group" id ="group" value="student" type="text" /></td>
+                    <td> <button class="form-control" class="btn-info " ng-click="save()">Save</button></td>
+
+                    <!-- </ng-container> -->
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+        angular.module('StudentController', []);
+    </script>
+    <script src="./js/controllers/StudentController.js"></script>
+</body>
