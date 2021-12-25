@@ -17,11 +17,11 @@
                 <tr>
                     <formname name="answerForm">
                     <td>
-                        <input class="form-control"   ng-model="student.name" id="nameS" maxlength="160" minlength="3" required>
-                        <input class="form-control" ng-model="student.place" id="placeS" maxlength="160" minlength="3" required>
-                        <input class="form-control"   ng-model="student.lastname" id="lastnameS"  maxlength="160" minlength="3"> 
-                        <input class="form-control"  ng-model="student.birthday " id="b-dayS"  placeholder="/\d\d/\d\d/\d\d\d\d/" type="date" >
-                        <input class="form-control"  ng-model="student.group " id="groupS"  maxlength="160" minlength="2">
+                        <input class="form-control"   ng-model="student.name" id="nameS" maxlength="160" minlength="3" required placeholder="name">
+                        <input class="form-control" ng-model="student.place" id="placeS" maxlength="160" minlength="3" required placeholder="place">
+                        <input class="form-control"   ng-model="student.lastname" id="lastnameS"  maxlength="160" minlength="3" placeholder="lastname"> 
+                        <input class="form-control"  ng-model="student.birthday " id="b-dayS"  placeholder="/\d\d/\d\d/\d\d\d\d/" type="date" placeholder="date" >
+                        <input class="form-control"  ng-model="student.group " id="groupS"  maxlength="160" minlength="2" placeholder="group">
                     </td>
                     <td>
                         <button class="btn-primary" ng-click="addStudent(answerForm)">Add Student</button>
